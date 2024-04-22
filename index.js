@@ -7,17 +7,15 @@ import randomColor from 'node-random-color';
 const color = process.argv[2];
 
 console.log(
-  chalk.blue('#'.repeat(31) + '\n' + '#'.repeat(31) + '\n' + '#'.repeat(31)),
+  chalk[color]('#'.repeat(31) + '\n' + '#'.repeat(31) + '\n' + '#'.repeat(31)),
 );
-console.log(chalk.color('#'.repeat(5) + ' '.repeat(21) + '#'.repeat(5)));
+console.log(chalk[color]('#'.repeat(5) + ' '.repeat(21) + '#'.repeat(5)));
 console.log(
-  chalk.color(
+  chalk[color](
     '#'.repeat(5) + ' '.repeat(7) + color + ' '.repeat(7) + '#'.repeat(5),
   ),
 );
-console.log(chalk.color('#'.repeat(5) + ' '.repeat(21) + '#'.repeat(5)));
+console.log(chalk[color]('#'.repeat(5) + ' '.repeat(21) + '#'.repeat(5)));
 console.log(
-  chalk.color('#'.repeat(31) + '\n' + '#'.repeat(31) + '\n' + '#'.repeat(31)),
+  chalk[color]('#'.repeat(31) + '\n' + '#'.repeat(31) + '\n' + '#'.repeat(31)),
 );
-
-console.log(process.argv[2]);
