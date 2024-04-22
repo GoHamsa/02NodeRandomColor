@@ -3,15 +3,23 @@
 ## 1. Form in random color
 
 [x] 1. output the form (the #-table) via formula, w/o color
-[] 2. output random color, w/o form
-[] 3. output form, in random color
-[] 4. ..., with HexCode stated inside
+[x] 2. download a library to create a random color
+[x] 3. output random color (HexCode), w/o form
+[x] 4. output any string in a random color
+[x] 5. output form, in random color
+[x] 6. ..., with HexCode stated inside
 
 ## 2. Determined color and vue
 
+[] 7. enable user input
 [] 5. output color, determined by input
 [] 6. output color & vue, determined by input
 [] 7. output form in color & vue, incl. HexCode inside
+
+## Stretch goals
+
+If a user types "ask" instead of a color name, print questions to ask the user for the name of the color and the luminosity
+If a user types a size in the format of WWxHH (eg. 31x9) before the color and luminosity, it will use this as the size of the box
 
 # Tasks
 
