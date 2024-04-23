@@ -1,10 +1,39 @@
 import { argv } from 'node:process';
 import chalk from 'chalk';
-import randomColor from 'node-random-color';
+// import randomColor from 'node-random-color';
+import randomColor from 'randomcolor';
 
-// import randomColor from 'randomcolor';
+// console.log(argv);
 
-if (process.argv > 1) {
+// Function for printing a hue and luminosity, set by user input
+function printHue() {
+  randomColor.luminosity = process.argv[2];
+  randomColor.hue = process.argv[3];
+  const color = randomColor({
+    luminosity: 'light',
+    hue: 'blue',
+  });
+  console.log(
+    chalk.hex(color)(
+      '#'.repeat(31) + '\n' + '#'.repeat(31) + '\n' + '#'.repeat(31),
+    ),
+  );
+  console.log(chalk.hex(color)('#'.repeat(5) + ' '.repeat(21) + '#'.repeat(5)));
+  console.log(
+    chalk.hex(color)(
+      '#'.repeat(5) + ' '.repeat(7) + color + ' '.repeat(7) + '#'.repeat(5),
+    ),
+  );
+  console.log(chalk.hex(color)('#'.repeat(5) + ' '.repeat(21) + '#'.repeat(5)));
+  console.log(
+    chalk.hex(color)(
+      '#'.repeat(31) + '\n' + '#'.repeat(31) + '\n' + '#'.repeat(31),
+    ),
+  );
+}
+
+// Function for printing printing figure in a color, set by user input
+function printSetColor() {
   const color = process.argv[2];
   console.log(
     chalk[color](
@@ -23,7 +52,9 @@ if (process.argv > 1) {
       '#'.repeat(31) + '\n' + '#'.repeat(31) + '\n' + '#'.repeat(31),
     ),
   );
-} else {
+}
+// Function for printing figure in a random color, in case user did not input a color
+function hexColor() {
   const color = randomColor();
   console.log(color);
   console.log(
@@ -43,4 +74,15 @@ if (process.argv > 1) {
       '#'.repeat(31) + '\n' + '#'.repeat(31) + '\n' + '#'.repeat(31),
     ),
   );
+}
+if (argv.length === 4) {
+  printHue();
+}
+// Condition, if user inputs a color
+if (argv.length === 3) {
+  printSetColor();
+}
+// Condition, for random color, if no color was input by user
+else {
+  hexColor();
 }

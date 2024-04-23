@@ -11,10 +11,12 @@
 
 ## 2. Determined color and vue
 
-[] 7. enable user input
-[] 5. output color, determined by input
-[] 6. output color & vue, determined by input
-[] 7. output form in color & vue, incl. HexCode inside
+[x] 7. enable user input
+[x] 8. output hue (color), determined by input
+[x] 10. output form in hue, incl. HexCode & if-condiction, else randomColor
+[x] 9. output form in hue & luminosity, incl. HexCode inside
+[x] 6. output hue & luminosity, determined by input
+[] if condition for all conditions
 
 ## Stretch goals
 
