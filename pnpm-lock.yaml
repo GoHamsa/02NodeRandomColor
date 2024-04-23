@@ -20,6 +20,9 @@ dependencies:
   random-hex-color:
     specifier: ^1.0.1
     version: 1.0.1
+  randomcolor:
+    specifier: ^0.6.2
+    version: 0.6.2
 
 devDependencies:
   eslint-config-upleveled:
@@ -2785,6 +2788,10 @@ packages:
 
   /random-hex-color@1.0.1:
     resolution: {integrity: sha512-n3tV3KDXFrHEXJiCByWvzx0tonuA+N1/qnnV8lqliHZZ2H7GOgriwGXuBj8C2KnjVzJVA/vSVBbzV/XDVz3a3Q==}
+    dev: false
+
+  /randomcolor@0.6.2:
+    resolution: {integrity: sha512-Mn6TbyYpFgwFuQ8KJKqf3bqqY9O1y37/0jgSK/61PUxV4QfIMv0+K2ioq8DfOjkBslcjwSzRfIDEXfzA9aCx7A==}
     dev: false
 
   /react-is@16.13.1:

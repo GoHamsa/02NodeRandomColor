@@ -15,7 +15,8 @@
     "full-icu": "^1.5.0",
     "node-emoji": "^2.1.3",
     "node-random-color": "^0.2.0",
-    "random-hex-color": "^1.0.1"
+    "random-hex-color": "^1.0.1",
+    "randomcolor": "^0.6.2"
   },
   "devDependencies": {
     "eslint-config-upleveled": "^7.8.3",
