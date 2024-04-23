@@ -3,7 +3,7 @@ import chalk from 'chalk';
 // import randomColor from 'node-random-color';
 import randomColor from 'randomcolor';
 
-// console.log(argv);
+console.log(argv);
 
 // Function for printing a hue and luminosity, set by user input
 function printHue() {
@@ -13,6 +13,7 @@ function printHue() {
     luminosity: 'light',
     hue: 'blue',
   });
+  console.log('hue & luminosity');
   console.log(
     chalk.hex(color)(
       '#'.repeat(31) + '\n' + '#'.repeat(31) + '\n' + '#'.repeat(31),
@@ -35,6 +36,7 @@ function printHue() {
 // Function for printing printing figure in a color, set by user input
 function printSetColor() {
   const color = process.argv[2];
+  console.log('hue');
   console.log(
     chalk[color](
       '#'.repeat(31) + '\n' + '#'.repeat(31) + '\n' + '#'.repeat(31),
@@ -56,7 +58,7 @@ function printSetColor() {
 // Function for printing figure in a random color, in case user did not input a color
 function hexColor() {
   const color = randomColor();
-  console.log(color);
+  console.log('RANDOM');
   console.log(
     chalk.hex(color)(
       '#'.repeat(31) + '\n' + '#'.repeat(31) + '\n' + '#'.repeat(31),
@@ -83,6 +85,6 @@ if (argv.length === 3) {
   printSetColor();
 }
 // Condition, for random color, if no color was input by user
-else {
+if (argv.length === 2) {
   hexColor();
 }
